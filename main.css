@@ -1,0 +1,64 @@
+h1 {
+    font-family: "Avenir";
+    font-size: 68pt;
+    font-weight: 900;
+    color: white;
+}
+
+p {
+    font-family: "Avenir";
+    color: white;
+    font-size: 20pt;
+    opacity: 60%;
+}
+
+.card {
+    background-color: #22223B;
+    border-radius: 20px;
+    border-width: 0;
+}
+
+.contact {
+    text-align: right;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    font-size: 14pt;
+    font-weight: 600;
+    color: white;
+    opacity: 70%;
+    padding: 15px 25px;
+}
+
+a:hover,
+a:active {
+    opacity: 100%;
+}
+
+/*Copyright*/
+
+.copyright {
+    grid-area: footer;
+    height: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+p.copyright {
+    color: black;
+    font-size: 8pt;
+    font-weight: 400;
+}
+
+/*Paddings*/
+.padding-50 {
+    padding-top: 50px;
+}
+
+.padding-100 {
+    padding-top: 100px;
+}
