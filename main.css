@@ -55,6 +55,10 @@ p.copyright {
 }
 
 /*Paddings*/
+.padding-25 {
+    padding-top: 25px;
+}
+
 .padding-50 {
     padding-top: 50px;
 }
