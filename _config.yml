@@ -8,12 +8,14 @@ site_icon                                 : assets/chipplogo.png
 studio_name                               : Chipp Studio
 studio_description                        : Small indie development company <br> We develop apps which make life easier
 
+# Apps
+wordsstack_icon                           : assets/wordsstack.png
 
 # Information About Yourself
-your_name                                 : Emil Baehr                                
+your_name                                 : Konstantin Tšistjakov                                
 your_link                                 : https://emilbaehr.com                     
-your_city                                 : Copenhagen                                
-email_address                             : emil.baehr@gmail.com
+your_city                                 : Tallinn                                
+email_address                             : konstantin@chippstudio.ee
 facebook_username                         :                                           
 instagram_username                        : ebaehr
 twitter_username                          : ebaehr

@@ -1,5 +1,5 @@
-
-.container {					// Set up the container for the site content
+.container {
+	// Set up the container for the site content
 	display: grid;
 	margin: auto;
 	max-width: $content-width;
@@ -8,7 +8,7 @@
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 115px auto auto auto;
 	grid-column-gap: 30px;
-	grid-template-areas: 
+	grid-template-areas:
 		"h h h h h h h h h h h h"
 		"i i i i i i i i i i i i"
 		"c c c c c c c c c c c c"
@@ -22,7 +22,8 @@
 
 @media only screen and (max-width: 768px) {
 
-	.container {					// Set up the container for the site content
+	.container {
+		// Set up the container for the site content
 		grid-template-rows: 80px 811px auto auto;
 	}
 }
@@ -33,7 +34,7 @@
 		grid-column-gap: 0px;
 		grid-template-columns: 1;
 		grid-template-rows: 115px auto auto auto auto;
-		grid-template-areas: 
+		grid-template-areas:
 			"h h h h h h h h h h h h"
 			"i i i i i i i i i i i i"
 			"p p p p p p p p p p p p"
@@ -55,8 +56,8 @@
 		margin-bottom: 70px;
 		grid-column: 1/-1;
 	}
-	
-} 
+
+}
 
 header {
 	grid-area: h;
@@ -72,7 +73,7 @@ header {
 	margin-right: 30px;
 }
 
-.logo > p {
+.logo>p {
 	color: $header-title-color;
 	white-space: nowrap;
 	display: flex;
@@ -87,11 +88,11 @@ header {
 		margin-right: 0px;
 	}
 
-	.logo > p {
+	.logo>p {
 		display: none;
 	}
-	
-} 
+
+}
 
 .headerIcon {
 	width: 50px;
@@ -106,12 +107,12 @@ header {
 		position: relative;
 		min-width: 1px;
 		max-width: 1px;
-		background-color:rgba(127, 127, 127, 0.2);
+		background-color: rgba(127, 127, 127, 0.2);
 		display: inline-block;
 		margin-left: 15px;
-	}	
-	
-} 
+	}
+
+}
 
 
 // Navigation Links
@@ -139,51 +140,51 @@ header {
 		padding-bottom: 100px;
 		margin-top: -60px;
 		justify-content: flex-start;
-	}	
-	
-} 
+	}
+
+}
 
 .scroll::-webkit-scrollbar {
 	display: none;
 }
 
 
-nav > ul {
+nav>ul {
 	color: #fff;
 	display: flex;
 	list-style-type: none;
 
 }
 
-nav > ul li {
+nav>ul li {
 	padding-left: 30px;
 }
 
 @media only screen and (max-width: 768px) {
 
-	nav > ul li {
+	nav>ul li {
 		padding-left: 20px;
 	}
 
 }
 
-nav > ul li:first-child {
+nav>ul li:first-child {
 	padding-left: 0px;
 	padding-left: 15px;
 }
 
-nav > ul li:last-child {
+nav>ul li:last-child {
 	padding-right: 15px;
 }
 
-nav > ul li a:link,
-nav > ul li a:visited {
+nav>ul li a:link,
+nav>ul li a:visited {
 	text-decoration: none;
 	color: rgba($header-title-color, 0.6);
 }
 
-nav > ul li a:hover,
-nav > ul li a:active {
+nav>ul li a:hover,
+nav>ul li a:active {
 	text-decoration: none;
 	color: rgba($header-title-color, 1);
 }
@@ -191,17 +192,17 @@ nav > ul li a:active {
 
 
 // Sub Page Header Styling
-.subPageHeaderBackground .logo > p {
+.subPageHeaderBackground .logo>p {
 	color: #000;
 }
 
-.subPageHeaderBackground nav > ul li a:link,
-.subPageHeaderBackground nav > ul li a:visited {
+.subPageHeaderBackground nav>ul li a:link,
+.subPageHeaderBackground nav>ul li a:visited {
 	color: rgba(#000, 0.6);
 }
 
-.subPageHeaderBackground nav > ul li a:hover,
-.subPageHeaderBackground nav > ul li a:active {
+.subPageHeaderBackground nav>ul li a:hover,
+.subPageHeaderBackground nav>ul li a:active {
 	color: rgba(#000, 1);
 }
 
@@ -227,7 +228,7 @@ nav > ul li a:active {
 		justify-content: center;
 	}
 
-} 
+}
 
 .appIconShadow {
 	display: flex;
@@ -267,7 +268,7 @@ nav > ul li a:active {
 		margin-top: 30px;
 		text-align: center;
 	}
-} 
+}
 
 .studioDescriptionContainer {
 	font-size: 2.5rem;
@@ -288,8 +289,8 @@ nav > ul li a:active {
 	.studioDescription {
 		text-align: center;
 	}
-	
-} 
+
+}
 
 .downloadButtonsContainer {
 	display: inline-block;
@@ -302,8 +303,8 @@ nav > ul li a:active {
 	.downloadButtonsContainer {
 		text-align: center;
 	}
-	
-} 
+
+}
 
 .playStore {
 	height: 75px;
@@ -316,8 +317,8 @@ nav > ul li a:active {
 		margin-right: 24px;
 		margin-bottom: 0px;
 	}
-	
-} 
+
+}
 
 @media only screen and (max-width: 528px) {
 
@@ -325,11 +326,11 @@ nav > ul li a:active {
 		margin-right: 0px;
 		margin-bottom: 24px;
 	}
-	
-} 
+
+}
 
 .appStore {
-	height: 75px;
+	height: 40px;
 }
 
 
@@ -345,7 +346,7 @@ nav > ul li a:active {
 	margin-top: 68px;
 	// justify-content: center;
 	// margin-left: auto;
-  	// margin-right: auto;
+	// margin-right: auto;
 }
 
 .iphoneScreen {
@@ -355,7 +356,7 @@ nav > ul li a:active {
 	justify-content: center;
 	align-self: center;
 	margin-left: auto;
-  	margin-right: auto;
+	margin-right: auto;
 }
 
 .videoContainer {
@@ -367,7 +368,7 @@ nav > ul li a:active {
 	margin-top: 23px;
 }
 
-.videoContainer > video {
+.videoContainer>video {
 	width: 349px;
 	height: 755px;
 }
@@ -390,13 +391,13 @@ nav > ul li a:active {
 		margin-left: 24px;
 		margin-top: 22px;
 	}
-	
-	.videoContainer > video {
+
+	.videoContainer>video {
 		width: 322px;
 		height: 698px;
 	}
-	
-} 
+
+}
 
 @media only screen and (max-width: 992px) {
 
@@ -425,16 +426,105 @@ nav > ul li a:active {
 		margin-top: 17px;
 	}
 
-	.videoContainer > video {
+	.videoContainer>video {
 		width: 226px;
 		height: 488px;
 	}
-	
-} 
+
+}
 
 // Apps list
 .apps {
 	grid-area: c;
+
+}
+
+.wordsStackContainer {
+	display: flex;
+	flex: 0 1 auto;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	margin-top: 24px;
+}
+
+.words-stack {
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: $studio-title-color;
+	margin-right: 24px;
+	// margin-left: 24px;
+	width: 60%;
+	height: 160px;
+}
+
+.words-stack-content {
+	display: flex;
+	align-items: center;
+	padding-left: 24px;
+	top: 50%;
+}
+
+.words-stack-appstore {
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: $studio-title-color;
+	// margin-right: 24px;
+	margin-left: 24px;
+	width: 30%;
+	height: 160px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.words-stack-appstore-content {
+	flex-grow: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.wordsStackContainer {
+		flex-grow: 1;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 11px;
+	}
+
+	.words-stack {
+		padding-top: 12px;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 12px;
+		margin: auto;
+		width: 100%;
+		height: auto;
+	}
+
+	.words-stack-content {
+		flex-grow: 1;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		padding-left: 0px;
+		top: 50%;
+	}
+
+	.words-stack-appstore {
+		margin: auto;
+		margin-top: 24px;
+		width: 100%;
+	}
 }
 
 
@@ -460,7 +550,7 @@ nav > ul li a:active {
 }
 
 .feature:nth-child(-n+3) {
-    padding-top: 0px;   
+	padding-top: 0px;
 }
 
 .feature:nth-child(3n) {
@@ -491,11 +581,11 @@ nav > ul li a:active {
 	margin-left: 18px;
 }
 
-.featureText > h3 {
+.featureText>h3 {
 	color: $feature-title-color;
 }
 
-.featureText > p {
+.featureText>p {
 	color: $feature-text-color;
 	margin-top: 8px;
 	line-height: 1.5;
@@ -519,21 +609,21 @@ nav > ul li a:active {
 	}
 
 	.feature:nth-child(-n+3) {
-		padding-top: 41px;   
+		padding-top: 41px;
 	}
 
 	.feature:nth-child(1) {
-		padding-top: 0px;   
+		padding-top: 0px;
 	}
 
 	.feature:nth-child(3n) {
 		padding-right: 15px;
 	}
-	
+
 	.feature:nth-child(3n+1) {
 		padding-left: 15px;
 	}
-	
+
 }
 
 @media only screen and (max-width: 375px) {
@@ -554,22 +644,22 @@ nav > ul li a:active {
 	}
 
 	.feature:nth-child(-n+3) {
-		padding-top: 41px;   
+		padding-top: 41px;
 	}
 
 	.feature:nth-child(1) {
-		padding-top: 0px;   
+		padding-top: 0px;
 	}
 
 	.feature:nth-child(3n) {
 		padding-right: 0px;
 	}
-	
+
 	.feature:nth-child(3n+1) {
 		padding-left: 0px;
 	}
-	
-} 
+
+}
 
 
 
@@ -628,12 +718,12 @@ footer {
 
 	.footerLinks a:first-child {
 		margin-top: 0px;
-	}	
+	}
 
 }
 
 @media only screen and (max-width: 992px) {
-	
+
 	.footerText {
 		color: $footer-text-color;
 		display: block;
@@ -643,13 +733,13 @@ footer {
 		padding-top: 54px;
 		padding-bottom: 61px;
 	}
-	
+
 	.footerIcons {
 		padding-bottom: 70px;
 		display: flex;
 	}
-	
-} 
+
+}
 
 .hidden {
 	display: none;
