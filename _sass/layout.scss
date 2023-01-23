@@ -436,7 +436,7 @@ nav>ul li a:active {
 // Apps list
 .apps {
 	grid-area: c;
-
+	margin-bottom: 140px;
 }
 
 .wordsStackContainer {
@@ -517,6 +517,10 @@ a:active.words-stack-appstore {
 }
 
 @media only screen and (max-width: 992px) {
+
+	.apps {
+		margin-bottom: 50px;
+	}
 
 	.wordsStackContainer {
 		flex-grow: 1;

@@ -12,6 +12,8 @@ studio_description                        : Small indie development company <br>
 wordsstack_icon                           : assets/wordsstack.png
 wordsstack_site                           : https://wordsstack.chippstudio.ee
 wordsstack_appstore                       : https://wordsstack.chippstudio.ee
+wordsstack_title                          : Words Stack
+wordsstack_description                    : Build your own vocabulary on foreign language
 
 # Information About Yourself
 your_name                                 : Konstantin Tšistjakov                                
@@ -19,9 +21,9 @@ your_link                                 : https://emilbaehr.com
 your_city                                 : Tallinn                                
 email_address                             : konstantin@chippstudio.ee
 facebook_username                         :                                           
-instagram_username                        : ebaehr
-twitter_username                          : ebaehr
-github_username                           : emilbaehr
+instagram_username                        : chippstudio
+twitter_username                          : ChippStudio
+github_username                           : ChippStudio
 youtube_username                          :
 
 
