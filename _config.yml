@@ -10,6 +10,8 @@ studio_description                        : Small indie development company <br>
 
 # Apps
 wordsstack_icon                           : assets/wordsstack.png
+wordsstack_site                           : https://wordsstack.chippstudio.ee
+wordsstack_appstore                       : https://wordsstack.chippstudio.ee
 
 # Information About Yourself
 your_name                                 : Konstantin Tšistjakov                                
@@ -35,7 +37,7 @@ cover_overlay_transparency                : 0.8
 
 body_background_color                     : "#ffffff"
 
-link_color                                : "#1d63ea"
+link_color                                : "#70A2FA"
 
 studio_title_color                        : "#22223B"
 studio_description_color                  : "#22223B"

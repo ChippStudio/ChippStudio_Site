@@ -1,7 +1,7 @@
 <div class="apps">
     <h3>Learning languages</h3>
     <div class="wordsStackContainer">
-        <div class="words-stack">
+        <a class="words-stack" href="{{site.wordsstack_site}}">
             <div class="words-stack-content">
                 <div class="appIconShadow">
                     <svg width="0" height="0">
@@ -15,13 +15,13 @@
                     </svg>
                     <img class="appIconLarge" src="{{ site.wordsstack_icon | relative_url }}">
                 </div>
-                <div>
+                <div class="words-stack-texts">
                     <h2>Words Stack</h2>
-                    <p>Build your own vocabulary on forign language</p>
+                    <p class="words-stack-description">Build your own vocabulary on forign language</p>
                 </div>
             </div>
-        </div>
-        <a class="words-stack-appstore" href="{{site.appstore_link}}">
+        </a>
+        <a class="words-stack-appstore" href="{{site.wordsstack_appstore}}">
             <div class="words-stack-appstore-content">
                 <h2>Words Stack</h2>
                 <img style="margin-top: 12px;" class="appStore" src="assets/appstore.png">
