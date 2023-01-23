@@ -1,11 +1,12 @@
 #page title
-page_title                                :                                          
+page_title                                : Chipp Studio | Indie development studio                                         
 
 # General  Info
 
 contact_email                             : info@chipptudio.ee                     
-
-site_icon                                  : # assets/appicon.png
+site_icon                                 : assets/chipplogo.png
+studio_name                               : Chipp Studio
+studio_description                        : Small indie development company <br> We develop apps which make life easier
 
 
 # Information About Yourself
@@ -22,9 +23,9 @@ youtube_username                          :
 
 
 # Theme Settings
-topbar_color                              : "#000000"
-topbar_transparency                       : 0.1
-topbar_title_color                        : "#ffffff"
+topbar_color                              : "#ffffff"
+topbar_transparency                       : 1.0
+topbar_title_color                        : "#70A2FA"
 
 cover_image                               : assets/headerimage.png
 cover_overlay_color                       : "#363b3d"
@@ -48,16 +49,6 @@ social_icons_foreground_color             : "#666666"
 social_icons_background_color             : "#e6e6e6"
 
 footer_text_color                         : "#666666"
-
-
-
-
-
-
-
-
-
-
 
 
 

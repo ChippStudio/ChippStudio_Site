@@ -9,23 +9,22 @@
 				</defs>
 			</svg>
 			{% if page.url != '/' %}
-				<a href="../" target="_self"><img class="headerIcon" src="{{ site.app_icon | relative_url }}"></a>
+				<a href="../" target="_self"><img class="headerIcon" src="{{ site.site_icon | relative_url }}"></a>
 			{% else %}
-				<img class="headerIcon" src="{{ site.app_icon | relative_url }}">
+				<img class="headerIcon" src="{{ site.site_icon | relative_url }}">
 			{% endif %}
 			<div class="divider"></div>
 		</div>
-		<p class="headerName">{{ site.app_name }}</p>
 	</div>
 	<nav class="scroll">
 		<ul>
 			{% for page in site.pages %}
 				{% if page.include_in_header == true %}
-				<li><a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a></li>
+				<li><a style="font-weight: 700;" href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a></li>
 				{% endif %}
 			{% endfor %}
-			{% if site.presskit_download_link %}
-				<li><a href="{{ site.presskit_download_link }}">Press Kit</a></li>
+			{% if site.contact_email %}
+				<li><a style="font-weight: 700;" href="mailto:{{ site.con }}">Contact</a></li>
 			{% endif %}
 		</ul>
 	</nav>
