@@ -1,36 +1,18 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
 
 {% include head.html %}
+{% include navbar.html %}
 
-<body>
-    <div class="container">
-        {% include header.html %}
-        <div class="studioInfo">
-            
-            <!-- <div class="appNamePriceContainer"> -->
-                <h1 class="studioName">
-                    {{ site.studio_name }}
-                </h1>
-            <!-- </div> -->
-            <div class="studioDescriptionContainer">
-                <p class="studioDescription">
-                    {{ site.studio_description }}
-                </p>
-            </div>
-            <!-- <div class="downloadButtonsContainer">
-                {% if site.playstore_link %}
-                <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore"
-                        src="assets/playstore.png"></a>
-                {% endif %}
-                <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore"
-                        src="assets/appstore.png"></a>
-            </div> -->
-        </div>
+<body class="min-h-screen flex flex-col">
 
-        {% include apps.html %}
-        {% include footer.html %}
-    </div>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="flex-grow">
+    {% include header.html %}
+  </div>
+  {% include footer.html %}
 </body>
 
 </html>

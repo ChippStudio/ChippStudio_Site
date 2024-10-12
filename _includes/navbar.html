@@ -1,0 +1,26 @@
+<header>
+	<div class="container mx-auto flex px-5 pt-5 items-center">
+		<div>
+			{% if page.url != '/' %}
+			<a href="/" target="_self"><img class="w-12 h-12" src="{{ site.app_icon | relative_url }}"></a>
+			{% else %}
+			<img class="w-12 h-12" src="{{ site.app_icon | relative_url }}">
+			{% endif %}
+		</div>
+		<p class="font-semibold invisible md:visible">{{ site.app_name }}</p>
+
+		<div class="grow"></div>
+		<div class="snap-x">
+			<div class="flex mx-auto space-x-4">
+				{% for page in site.pages %}
+				{% if page.include_in_header == true %}
+				<a class="hover:bg-slate-100 px-3 py-1 rounded-md" href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a>
+				{% endif %}
+				{% endfor %}
+				{% if site.presskit_download_link %}
+				<a href="{{ site.presskit_download_link }}">Press Kit</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</header>

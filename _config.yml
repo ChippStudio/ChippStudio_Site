@@ -1,61 +1,39 @@
 #page title
-page_title                                : Chipp Studio | Indie development studio                                         
+page_title: 'Headroom: Podcast Studio'
 
-# General  Info
+# App Info
+ios_app_id: 6453882470
+ios_app_country: us
 
-contact_email                             : info@chipptudio.ee                     
-site_icon                                 : assets/chipplogo.png
-studio_name                               : Chipp Studio
-studio_description                        : Small indie development company <br> We develop apps which make life easier
+# presskit_download_link: https://headroompublic.ams3.digitaloceanspaces.com/Headroom_PressKit.zip
 
-# Apps
-wordsstack_icon                           : assets/wordsstack.png
-wordsstack_site                           : https://wordsstack.chippstudio.ee
-wordsstack_appstore                       : https://apps.apple.com/us/app/words-stack/id1635180628
-wordsstack_title                          : Words Stack
-wordsstack_description                    : Build your own vocabulary on foreign language
+app_icon: images/icon.png
+app_name: 'Headroom: Podcast Studio'
+app_price: Free
+
+# Meta tags optimisation
+description: 'Headroom: An all-in-one macOS app for preparing, producing, and publishing your podcast. With Headroom, you can automate routine tasks and focus on content creation instead of the technical aspects.'
+cover: images/meta_cover.png
+keywords: ai,whisper,podcast chapters,mp3,podcast,id3 tag,audio transcription,playback,openai,artwork,ia,voice,podcast editor,podcast chapters,mp3,audio editor,chapters,id3 tags,playback,audio-to-text,artwork,Podcast Manager,Metadata Editor,MP3,Audio,Chapters,Artwork,Playback,Export,Quality,Visualize
+
+enable_smart_app_banner: false
+
+# Header
+header_title: Podcasting in the most efficient way
+header_subtitle: Headroom is one solution for podcast production, providing all that you need to record, edit, prepare, and deliver an episode.
 
 # Information About Yourself
-your_name                                 : Konstantin Tšistjakov                                
-your_link                                 :                 
-your_city                                 : Tallinn                                
-email_address                             : konstantin@chippstudio.ee
-facebook_username                         :                                           
-instagram_username                        : chippstudio
-twitter_username                          : ChippStudio
-github_username                           : ChippStudio
-youtube_username                          :
-
-
-
-# Theme Settings
-topbar_color                              : "#ffffff"
-topbar_transparency                       : 1.0
-topbar_title_color                        : "#70A2FA"
-
-cover_image                               : assets/headerimage.png
-cover_overlay_color                       : "#363b3d"
-cover_overlay_transparency                : 0.8
-
-body_background_color                     : "#ffffff"
-
-link_color                                : "#70A2FA"
-
-studio_title_color                        : "#22223B"
-studio_description_color                  : "#22223B"
-
-feature_title_color                       : "#000000"
-feature_text_color                        : "#666666"
-
-feature_icons_foreground_color            : "#1d63ea"
-feature_icons_background_color            : "#e6e6e6"
-
-social_icons_foreground_color             : "#666666"
-social_icons_background_color             : "#e6e6e6"
-
-footer_text_color                         : "#666666"
-
-
+your_name: Chipp Studio OÜ                                
+your_link: https://chippstudio.ee                    
+your_city: Tallinn                                
+email_address: info@chippstudio.ee
+facebook_username: 61563619501214
+# instagram_username: headroom.podcastapp
+# twitter_username: useheadroomapp
+linkedin_username: 102554801
+# mastodon_link: mastodon.social/@headroom
+# github_username: 
+# youtube_username:
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###
@@ -70,6 +48,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - vendor/
+
+include:
+ - .well-known
 
 collections:
   pages:
