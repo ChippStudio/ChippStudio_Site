@@ -18,10 +18,6 @@ keywords:
 
 enable_smart_app_banner: false
 
-# Header
-header_title: Podcasting in the most efficient way
-header_subtitle: Headroom is one solution for podcast production, providing all that you need to record, edit, prepare, and deliver an episode.
-
 # Information About Yourself
 your_name: Konstantin Tšistjakov                               
 your_link: https://chippstudio.ee                  
@@ -34,6 +30,14 @@ email_address: info@chippstudio.ee
 # mastodon_link: mastodon.social/@headroom
 # github_username: 
 # youtube_username:
+
+socials:
+  - social:
+    title: LinkedIn
+    url: https://www.linkedin.com/in/konstantints/
+  - social:
+    title: X (Twitter)
+    url: https://x.com/ktsistjakov
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###

@@ -1,28 +1,29 @@
 <div class="md:container md:mx-auto px-4">
-    <div class="md:pt-20 flex">
-        <div>
-            <img class="w-24 h-24" src="{{site.baseurl}}/images/me_avatar.png" alt="...">
-        </div>
-        <div class="pl-12">
-            <div class="text-xl">
-                <b>Hello There!</b> <br> I'm Konstantin, in last decade, crafting apps <br>and help others to do the same
-            </div>
-
-            <div class="pt-3 text-slate-500">
-                <ul class="list-none">
-                    <li>iOS and macOS indie developer</li>
-                    <li>part time product designer</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="md:pt-28">
-        <div class="text-5xl font-semibold text-slate-900">
+    <div class="md:pt-16">
+        <div class="text-5xl font-extrabold text-slate-800">
             Chipp Studio
         </div>
         <div class="text-lg text-slate-500">
             by Konstantin Tšisjakov
         </div>
+    </div>
+
+    <div class="pt-16">
+        <div class="text-3xl font-bold tracking-wide text-slate-700">
+            <span class="text-slate-400">Hi, I'm Konstantin.</span> For over a decade, I’ve been creating<br>
+            high-quality apps and helping others do the same. I focus on <br>
+            crafting great interactions, animations, and performance.<br>
+            Previously, I was a Senior iOS Developer at <a class="hover:text-slate-500 hover:underline hover:underline-offset-4" href="https://bolt.eu">Bolt</a> and a <br>
+            Senior Product Engineer at <a class="hover:text-slate-500 hover:underline hover:underline-offset-4" href="https://www.craft.do">Craft Doc</a>. Now, I’m an indie <br>
+            iOS and macOS developer and part-time product designer.<br>
+        </div>
+    </div>
+
+    <div class="pt-12">
+        {% for social in site.socials %}
+        <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ social.url }}">
+            {{ social.title }} <i class="text-slate-400 fas fa-link pl-1"></i>
+        </a>
+        {% endfor %}
     </div>
 </div>

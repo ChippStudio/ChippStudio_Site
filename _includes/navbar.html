@@ -7,7 +7,9 @@
 			<img class="w-10 h-10 rounded-md" src="{{ site.app_icon | relative_url }}">
 			{% endif %}
 		</div>
+		{% if page.url != '/' %}
 		<p class="font-semibold invisible md:visible pl-4">{{ site.app_name }}</p>
+		{% endif %}
 
 		<div class="grow"></div>
 		<div class="snap-x">
