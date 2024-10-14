@@ -1,61 +1,43 @@
 #page title
-page_title                                : Chipp Studio | Indie development studio                                         
+page_title: 'Chipp Studio | Indie Development'
 
-# General  Info
+# App Info
+# ios_app_id: 6453882470
+# ios_app_country: us
 
-contact_email                             : info@chipptudio.ee                     
-site_icon                                 : assets/chipplogo.png
-studio_name                               : Chipp Studio
-studio_description                        : Small indie development company <br> We develop apps which make life easier
+# presskit_download_link: https://headroompublic.ams3.digitaloceanspaces.com/Headroom_PressKit.zip
 
-# Apps
-wordsstack_icon                           : assets/wordsstack.png
-wordsstack_site                           : https://wordsstack.chippstudio.ee
-wordsstack_appstore                       : https://apps.apple.com/us/app/words-stack/id1635180628
-wordsstack_title                          : Words Stack
-wordsstack_description                    : Build your own vocabulary on foreign language
+app_icon: images/chipp_studio_icon.png
+app_name: 'Chipp Studio'
+app_price: Free
+
+# Meta tags optimisation
+description: 'Chipp Studio is a boutique indie development studio specializing in crafting high-quality Mac and iOS applications. With a focus on user experience, performance, and elegant design, Chipp Studio develops custom solutions for both professionals and creative users.'
+cover: images/meta_cover.png
+keywords: Chipp Studio, indie development studio, Mac apps, iOS apps, Apple ecosystem, app development, custom app solutions, user experience, app design, professional tools, creative tools, indie apps, iOS development, macOS development, app performance, app innovation, software for professionals, app portfolio
+
+enable_smart_app_banner: false
 
 # Information About Yourself
-your_name                                 : Konstantin Tšistjakov                                
-your_link                                 :                 
-your_city                                 : Tallinn                                
-email_address                             : konstantin@chippstudio.ee
-facebook_username                         :                                           
-instagram_username                        : chippstudio
-twitter_username                          : ChippStudio
-github_username                           : ChippStudio
-youtube_username                          :
+your_name: Konstantin Tšistjakov                               
+your_link: https://chippstudio.ee                  
+your_city: Tallinn                                
+email_address: info@chippstudio.ee
+# facebook_username: 61563619501214
+# instagram_username: headroom.podcastapp
+# twitter_username: useheadroomapp
+# linkedin_username: 102554801
+# mastodon_link: mastodon.social/@headroom
+# github_username: 
+# youtube_username:
 
-
-
-# Theme Settings
-topbar_color                              : "#ffffff"
-topbar_transparency                       : 1.0
-topbar_title_color                        : "#70A2FA"
-
-cover_image                               : assets/headerimage.png
-cover_overlay_color                       : "#363b3d"
-cover_overlay_transparency                : 0.8
-
-body_background_color                     : "#ffffff"
-
-link_color                                : "#70A2FA"
-
-studio_title_color                        : "#22223B"
-studio_description_color                  : "#22223B"
-
-feature_title_color                       : "#000000"
-feature_text_color                        : "#666666"
-
-feature_icons_foreground_color            : "#1d63ea"
-feature_icons_background_color            : "#e6e6e6"
-
-social_icons_foreground_color             : "#666666"
-social_icons_background_color             : "#e6e6e6"
-
-footer_text_color                         : "#666666"
-
-
+socials:
+  - social:
+    title: LinkedIn
+    url: https://www.linkedin.com/in/konstantints/
+  - social:
+    title: X (Twitter)
+    url: https://x.com/ktsistjakov
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###
@@ -70,6 +52,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - vendor/
+
+include:
+ - .well-known
 
 collections:
   pages:
