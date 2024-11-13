@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Terms of service
+description: Terms of service for Grabby application
+app: grabby
 include_in_header: false
 include_in_footer: false
 ---

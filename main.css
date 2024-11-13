@@ -644,6 +644,10 @@ ul, ol {
   height: 2.5rem;
 }
 
+.max-h-14 {
+  max-height: 3.5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -811,6 +815,26 @@ ul, ol {
 
 .pt-7 {
   padding-top: 1.75rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
+}
+
+.pr-12 {
+  padding-right: 3rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.pr-11 {
+  padding-right: 2.75rem;
+}
+
+.pr-14 {
+  padding-right: 3.5rem;
 }
 
 .text-center {

@@ -6,7 +6,9 @@
 	<div class="space-x-4">
 		{% for page in site.pages %}
 			{% if page.include_in_footer == true %}
-				<a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a>
+				<a class="text-xs font-bold text-slate-700 hover:text-slate-400 hover:underline" href="{{ page.url | relative_url }}" target="_self">
+					{{ page.title }}
+				</a>
 			{% endif %}
 		{% endfor %}
 		{% if site.presskit_download_link %}
