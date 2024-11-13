@@ -1,0 +1,67 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+<!doctype html>
+<html>
+
+<head>
+	{% include head_top.html %}
+
+	<title class="pageTitle">{{ page.title }} | Headroom Blog</title>
+
+	<!-- Meta tags -->
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="{{ page.keywords }}" />
+
+	<meta property="og:site_name" content="{{ page.title }} | Headroom Blog">
+	<meta property="og:title" content="{{ page.title }} | Headroom Blog"/>
+	<meta property="og:description" content="{{ page.description }}" />
+	<meta property="og:image" content="/images/blog/covers/{{ page.cover }}_header_cover.png" />
+	<meta property="og:url" content="https://chippstudio.ee{{ page.url }}" />
+	<meta property="og:type" content="website">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="chippstudio.ee">
+	<meta property="twitter:url" content="https://chippstudio.ee{{ page.url }}">
+	<meta name="twitter:title" content="{{ page.title }} | Headroom Blog">
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:image" content="/images/blog/covers/{{ page.cover}}_header_cover.png">
+
+	<meta name="author" content="{{ site.your_name }}">
+	<meta name="copyright" content="{{ site.app_icon | relative_url }}">
+
+	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
+	<link rel="canonical" href="https://chippstudio.ee{{ page.url }}">
+
+	{% include head_analytics.html %}
+</head>
+
+{% include navbar.html %}
+
+<body class="min-h-screen flex flex-col">
+  <div class="flex-grow pb-24">
+    <div class="container mx-auto">
+
+      <div class="grid justify-items-center px-2">
+
+        <div class="my-16 text-center">
+          <div class="text-4xl font-bold">
+            Chipp Studio | Grabby
+          </div>
+          <div class="text-lg">
+            News, updates, tips, and Chipp Studio under the hood {{ page.title }}
+          </div>
+        </div>
+
+        <div class="my-16 text-center text-xl font-bold text-slate-600">
+          Wow, you're here! Our blog is under construction. We hope to see you back soon!
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+
+</html>

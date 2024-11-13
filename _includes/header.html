@@ -26,4 +26,26 @@
         </a>
         {% endfor %}
     </div>
+
+    <div class="pt-12">
+        <div class="text-slate-700 text-xl font-bold">
+            Apps <i class="text-slate-400 fab fa-app-store pl-1"></i>
+        </div>
+
+        <div class="pt-5">
+            {% for page in site.pages %}
+				{% if page.app_layout == true %}
+                <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ page.url | relative_url }}">
+                    <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+                        {{ page.title }}
+                    </div>
+                    <div class="text-slate-500 text-lg font-bold">
+                        {{ page.description }}
+                    </div>
+                    
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
