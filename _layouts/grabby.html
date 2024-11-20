@@ -1,0 +1,97 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+<!doctype html>
+<html>
+
+<head>
+	{% include head_top.html %}
+
+	<title class="pageTitle">{{ page.title }} | Chipp Studio</title>
+
+	<!-- Meta tags -->
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="{{ page.keywords }}" />
+
+	<meta property="og:site_name" content="{{ page.title }}">
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:description" content="{{ page.description }}" />
+	<meta property="og:image" content="/images/{{ page.cover }}_header_cover.png" />
+	<meta property="og:url" content="https://chippstudio.ee{{ page.url }}" />
+	<meta property="og:type" content="website">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="chippstudio.ee">
+	<meta property="twitter:url" content="https://chippstudio.ee{{ page.url }}">
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:image" content="/images/{{ page.cover}}_header_cover.png">
+
+	<meta name="author" content="{{ site.your_name }}">
+	<meta name="copyright" content="{{ site.app_icon | relative_url }}">
+
+	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
+	<link rel="canonical" href="https://chippstudio.ee{{ page.url }}">
+
+	{% include head_analytics.html %}
+</head>
+
+{% include navbar.html %}
+
+<body class="min-h-screen flex flex-col">
+	<div class="flex-grow pb-24">
+		<div class="container mx-auto">
+
+			<div class="grid justify-items-center px-2">
+
+				<div class="my-16 text-center items-center pt-12">
+					<div class="text-5xl md:text-8xl font-extrabold text-slate-700">
+						Grabby
+					</div>
+					<div class="text-xl md:text-2xl max-w-96 pt-4">
+						Use your videos to capture best moments. with Grabby app you get high quality and smooth
+						capturing experience
+					</div>
+				</div>
+
+				<div class="pt-8 md:pt-24">
+					<!-- Image for Mobile (grabby_phone_screenshot_mobile) -->
+					<img class="block md:hidden w-full h-auto"
+						src="{{site.baseurl}}/images/grabby_phone_screenshot_mobile.png" alt="Mobile Screenshot">
+
+					<!-- Image for Larger Views (grabby_phone_screenshot) -->
+					<img class="hidden md:block object-fill inline max-w-3xl"
+						src="{{site.baseurl}}/images/grabby_phone_screenshot.png" alt="Desktop Screenshot">
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 pt-8 md:pt-48">
+					<!-- Column 1: Card 1 and Card 4 -->
+					<div class="flex flex-col gap-4">
+						<img class="w-full h-auto" src="{{site.baseurl}}/images/grabby_bento/bento-01.png" alt="Card 1">
+						<img class="w-full h-auto" src="{{site.baseurl}}/images/grabby_bento/bento-04.png" alt="Card 4">
+					</div>
+
+					<!-- Column 2: Card 2 and Card 5 -->
+					<div class="flex flex-col gap-4">
+						<img class="w-full h-auto" src="{{site.baseurl}}/images/grabby_bento/bento-02.png" alt="Card 2">
+						<img class="w-full h-auto" src="{{site.baseurl}}/images/grabby_bento/bento-05.png" alt="Card 5">
+					</div>
+
+					<!-- Column 3: Card 3 and Card 6 -->
+					<div class="flex flex-col gap-4">
+						<img class="w-full h-auto" src="{{site.baseurl}}/images/grabby_bento/bento-03.png" alt="Card 3">
+						<img class="w-full h-auto" src="{{site.baseurl}}/images/grabby_bento/bento-06.png" alt="Card 6">
+					</div>
+				</div>
+
+				<div class="text-5xl font-extrabold text-slate-700 pt-4 md:pt-32">
+					Grabby
+				</div>
+
+			</div>
+		</div>
+	</div>
+	{% include footer.html %}
+</body>
+
+</html>

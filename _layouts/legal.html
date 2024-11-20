@@ -1,0 +1,50 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+<!doctype html>
+<html>
+
+{% include head.html %}
+{% include navbar.html %}
+
+<body class="min-h-screen flex flex-col">
+  <div class="flex-grow">
+    <div class="md:container md:mx-auto px-4">
+      <div class="pt-6 md:pt-16">
+          <div class="text-5xl font-extrabold text-slate-800">
+              Legal Documents
+          </div>
+          <div class="text-lg font-medium text-slate-500">
+              Here, you can find the legal documents for all our projects.
+          </div>
+      </div>
+
+      <div class="pt-12 text-3xl font-bold text-slate-600"> 
+        Grabby: Photos from video
+      </div>
+
+      <div class="flex pt-5">
+        {% for page in site.pages %}
+          {% if page.app == 'grabby' %}
+            <a href="{{ page.url | relative_url }}" target="_self" class="flex pr-14">
+              <div class="flex">
+                <img class="object-fill inline max-h-14 pr-4" src="{{site.baseurl}}/images/chipp_document.png" alt="...">
+                <div>
+                  <div class="text-2xl font-semibold text-slate-600">
+                    {{ page.title }}
+                  </div>
+                  <div class="text-xl text-slate-400">
+                    {{ page.description }}
+                  </div>
+                </div>
+              </div>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+
+</html>
