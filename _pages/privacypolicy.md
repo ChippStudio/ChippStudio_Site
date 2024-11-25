@@ -5,6 +5,7 @@ description: Privacy policy for Grabby application
 app: grabby
 include_in_header: false
 include_in_footer: false
+permalink: /grabby/privacy/
 ---
 
 **Last updated**
