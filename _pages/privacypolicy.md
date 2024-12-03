@@ -9,7 +9,7 @@ permalink: /grabby/privacy/
 ---
 
 **Last updated**
-November 18, 2023
+December 3, 2024
 
 This policy applies to all information collected or submitted on Grabby application for iOS, macOS, watchOS, tvOS and any other devices and platforms.
 
@@ -29,6 +29,10 @@ Information may be processed, stored, and used outside of the country in which y
 By using our site or apps, you consent to our privacy policy.
 
 # Third Party Services
+
+### Mixpanel
+Analytics service. Read [privacy policy](https://mixpanel.com/legal/privacy-policy/)
+
 ### RevenueCat
 Purchase provider and analytics service. Read [privacy policy](https://www.revenuecat.com/privacy/)
 
@@ -39,4 +43,5 @@ If you have questions regarding this privacy policy, you may email [info@chippst
 If we decide to change our privacy policy, we will post those changes on this page. Summary of changes so far:
 
 
+- **December 3**, 2024: Mixpanel privacy policy link.
 - **November 18**, 2024: First published.
