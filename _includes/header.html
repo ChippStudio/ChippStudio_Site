@@ -33,6 +33,16 @@
         </div>
 
         <div class="pt-5">
+
+            <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="https://headroom.ee">
+                <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+                    Headroom: AI-Powered Podcast Publishing for macOS
+                </div>
+                <div class="text-slate-500 text-lg font-bold">
+                    Headroom is a macOS-native app that helps creators prepare, transcribe, and publish podcast episodes with ease. AI-assisted editing, chapter generation, and metadata tools streamline your entire workflow — from import to export.
+                </div>
+            </a>
+
             {% for page in site.pages %}
 				{% if page.app_layout == true %}
                 <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ page.url | relative_url }}">
@@ -42,7 +52,6 @@
                     <div class="text-slate-500 text-lg font-bold">
                         {{ page.description }}
                     </div>
-                    
                 </a>
                 {% endif %}
             {% endfor %}
