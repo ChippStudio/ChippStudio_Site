@@ -1,0 +1,52 @@
+<div class="pt-12">
+    <div class="text-slate-700 text-xl font-bold">
+        Apps <i class="text-slate-400 fab fa-app-store pl-1"></i>
+    </div>
+
+    <div class="pt-5 max-w-full md:max-w-2xl md:mx-0 flex flex-col gap-8">
+        <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="https://headroom.ee">
+            <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+                Headroom: AI-Powered Podcast Publishing for macOS
+            </div>
+            <div class="mt-2 flex gap-2">
+                <span
+                    class="inline-block rounded-full bg-slate-100 px-3 py-1 text-sm font-heavy text-slate-500 mb-2">
+                    macOS
+                </span>
+                <!-- <span
+                    class="inline-block rounded-full bg-slate-100 px-3 py-1 text-sm font-heavy text-slate-500 mb-2">
+                    iOS
+                </span> -->
+            </div>
+            <div class="text-slate-500 text-lg font-semibold mt-3">
+                Headroom is a macOS-native app that helps creators prepare, transcribe, and publish podcast episodes
+                with ease. AI-assisted editing, chapter generation, and metadata tools streamline your entire
+                workflow — from import to export.
+            </div>
+        </a>
+
+        {% for page in site.pages %}
+        {% if page.app_layout == true %}
+        <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4"
+            href="{{ page.url | relative_url }}">
+            <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+                {{ page.title }}
+            </div>
+            {% if page.systems %}
+            <div class="mt-2 flex gap-2">
+                {% for system in page.systems %}
+                <span
+                    class="inline-block rounded-full bg-slate-100 px-3 py-1 text-sm font-heavy text-slate-500 mb-2">
+                    {{ system }}
+                </span>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div class="text-slate-500 text-lg font-bold">
+                {{ page.description }}
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

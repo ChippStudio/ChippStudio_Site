@@ -1,66 +1,72 @@
 <div class="md:container md:mx-auto px-4">
     <div class="pt-6 md:pt-16">
-        <div class="text-5xl font-extrabold text-slate-800">
-            Chipp Studio
-        </div>
-        <div class="text-lg font-medium text-slate-500">
-            by Konstantin Tšisjakov
+        <div class="flex flex-col md:flex-row md:items-center md:gap-6">
+            <div>
+                <div class="text-5xl font-extrabold text-slate-800">
+                    Chipp Studio
+                </div>
+                <div class="text-lg font-medium text-slate-500">
+                    by Konstantin Tšisjakov & Olga Vyrostko
+                </div>
+            </div>
+            <img class="w-28 h-16 md:w-auto md:h-16 mt-4 md:mt-0 object-contain" src="{{site.baseurl}}/images/team.png"
+                alt="Team Image">
         </div>
     </div>
 
-    <div class="pt-7 md:pt-16">
-        <div class="sm:text-xl md:text-3xl font-bold tracking-wide text-slate-700 max-w-4xl">
-            <span class="text-slate-400">Hi, I'm Konstantin.</span> For over a decade, I’ve been creating
-            high-quality apps and helping others do the same. I focus on
-            crafting great interactions, animations, and performance.
-            Previously, I was a Senior iOS Developer at <a class="hover:text-slate-500 hover:underline hover:underline-offset-4" href="https://bolt.eu">Bolt</a> and a
-            Senior Product Engineer at <a class="hover:text-slate-500 hover:underline hover:underline-offset-4" href="https://www.craft.do">Craft Doc</a>. Now, I’m an indie
-            iOS and macOS developer and part-time product designer.
+    <div class="pt-5 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
+        <div class="md:pt-8">
+            <div class="pt-7 lg:pt-16">
+                <div class="sm:text-xl md:text-3xl font-bold tracking-wide text-slate-700 max-w-4xl">
+                    <span class="text-slate-400">Hi, I'm Konstantin.</span> For over a decade, I’ve been creating
+                    high-quality apps and helping others do the same. I focus on
+                    crafting great interactions, animations, and performance.
+                    Previously, I was a Senior iOS Developer at <a
+                        class="hover:text-slate-500 hover:underline hover:underline-offset-4"
+                        href="https://bolt.eu">Bolt</a> and a
+                    Senior Product Engineer at <a class="hover:text-slate-500 hover:underline hover:underline-offset-4"
+                        href="https://www.craft.do">Craft Doc</a>. Now, I’m an indie
+                    iOS and macOS developer and part-time product designer.
+                </div>
+            </div>
+            <div class="pt-4 md:pt-12">
+                {% for social in site.konstantin_socials %}
+                <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ social.url }}">
+                    {{ social.title }} <i class="text-slate-400 fas fa-link pl-1"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="md:pt-0">
+            <div class="pt-7 md:pt-16">
+                <div class="sm:text-xl md:text-3xl font-bold tracking-wide text-slate-700 max-w-4xl">
+                    <span class="text-slate-400">Hi, I’m Olga.</span> I’m passionate about uncovering real user problems and turning them into simple
+                    solutions that combine delight and pragmatism - and just work. By day, I’m an Engineering Manager at
+                    <a
+                        class="hover:text-slate-500 hover:underline hover:underline-offset-4"
+                        href="https://bolt.eu">Bolt</a>, where I lead the cross-platform Rider team and help scale mobile experiences for millions of
+                    users. Outside of work (by night?), I spend my time exploring side projects that blend product
+                    thinking, design, and mobile engineering into solving the problems.
+                </div>
+            </div>
+            <div class="pt-4 md:pt-12">
+                {% for social in site.olga_socials %}
+                <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ social.url }}">
+                    {{ social.title }} <i class="text-slate-400 fas fa-link pl-1"></i>
+                </a>
+                {% endfor %}
+            </div>
         </div>
     </div>
 
     <div class="pt-12">
-        {% for social in site.socials %}
-        <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ social.url }}">
-            {{ social.title }} <i class="text-slate-400 fas fa-link pl-1"></i>
-        </a>
-        {% endfor %}
-    </div>
-
-    <div class="pt-12">
-        <a href="https://chippstudio.substack.com" target="_blank" rel="noopener" class="text-slate-700 hover:text-slate-400 font-bold pr-4 flex items-center w-fit">
+        <a href="https://chippstudio.substack.com" target="_blank" rel="noopener"
+            class="text-slate-700 hover:text-slate-400 font-bold pr-4 flex items-center w-fit">
             Chipp Studio Newsletter
             <i class="text-slate-400 fas fa-link pl-1"></i>
         </a>
     </div>
 
-    <div class="pt-12">
-        <div class="text-slate-700 text-xl font-bold">
-            Apps <i class="text-slate-400 fab fa-app-store pl-1"></i>
-        </div>
-
-        <div class="pt-5 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="https://headroom.ee">
-                <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
-                    Headroom: AI-Powered Podcast Publishing for macOS
-                </div>
-                <div class="text-slate-500 text-lg font-bold">
-                    Headroom is a macOS-native app that helps creators prepare, transcribe, and publish podcast episodes with ease. AI-assisted editing, chapter generation, and metadata tools streamline your entire workflow — from import to export.
-                </div>
-            </a>
-
-            {% for page in site.pages %}
-                {% if page.app_layout == true %}
-                <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ page.url | relative_url }}">
-                    <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
-                        {{ page.title }}
-                    </div>
-                    <div class="text-slate-500 text-lg font-bold">
-                        {{ page.description }}
-                    </div>
-                </a>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+    {% include apps.html %}
 </div>

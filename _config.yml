@@ -31,13 +31,21 @@ email_address: info@chippstudio.ee
 # github_username: 
 # youtube_username:
 
-socials:
+konstantin_socials:
   - social:
     title: LinkedIn
     url: https://www.linkedin.com/in/konstantints/
   - social:
     title: X (Twitter)
     url: https://x.com/ktsistjakov
+
+olga_socials:
+  - social:
+    title: LinkedIn
+    url: http://www.linkedin.com/in/olga-vyrostko-4414b5140
+  - social:
+    title: Instagram
+    url: https://www.instagram.com/olgavyrostko/
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###
