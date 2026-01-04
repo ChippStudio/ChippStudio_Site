@@ -1,0 +1,91 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+<!doctype html>
+<html>
+
+<head>
+	{% include head_top.html %}
+
+	<title class="pageTitle">{{ page.title }} | Chipp Studio</title>
+
+	<!-- Meta tags -->
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="{{ page.keywords }}" />
+
+	<meta property="og:site_name" content="{{ page.title }}">
+	<meta property="og:title" content="{{ page.title }}" />
+	<meta property="og:description" content="{{ page.description }}" />
+	<meta property="og:image" content="/images/{{ page.cover }}_header_cover.png" />
+	<meta property="og:url" content="https://chippstudio.ee{{ page.url }}" />
+	<meta property="og:type" content="website">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="twitter:domain" content="chippstudio.ee">
+	<meta property="twitter:url" content="https://chippstudio.ee{{ page.url }}">
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:image" content="/images/{{ page.cover}}_header_cover.png">
+
+	<meta name="author" content="{{ site.your_name }}">
+	<meta name="copyright" content="{{ site.app_icon | relative_url }}">
+
+	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
+	<link rel="canonical" href="https://chippstudio.ee{{ page.url }}">
+
+	{% include head_analytics.html %}
+</head>
+
+{% include navbar.html %}
+
+<body class="min-h-screen flex flex-col">
+	<div class="flex-grow pb-24">
+		<div class="container mx-auto">
+
+			<div class="grid justify-items-center px-2">
+
+				<div class="my-16 text-center items-center pt-12">
+					<div class="text-5xl md:text-8xl font-extrabold text-slate-700">
+						Dear<br>Today
+					</div>
+
+					<div class="text-4xl md:text-4xl font-bold text-slate-900 pt-16">
+						Every day tells a story
+					</div>
+
+					<div class="text-xl md:text-2xl max-w-90 pt-4 text-center">
+						Capture your daily moments, track your moods, and watch your life unfold in the most beautiful visual diary you’ve ever kept.
+					</div>
+				</div>
+
+				<!-- <a target="_self" href="https://itunes.apple.com/app/id6737150716">
+					<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
+				</a> -->
+
+				<div class="text-4xl md:text-4xl font-bold text-slate-600 pt-16">
+						Coming Soon in App Store
+				</div>
+
+				<div class="pt-8 md:pt-24">
+					<img class=" w-full h-auto"
+						src="{{site.baseurl}}/images/DearToday_screenshot.png" alt="Screenshot">
+				</div>
+
+				<div class="text-5xl font-extrabold text-slate-700 pt-4 md:pt-32">
+					Dear Today
+				</div>
+
+				<!-- <a class="pt-12" target="_self" href="https://itunes.apple.com/app/id6737150716">
+					<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
+				</a> -->
+				<div class="text-4xl md:text-4xl font-bold text-slate-600 pt-16">
+						Coming Soon in App Store
+				</div>
+
+			</div>
+		</div>
+	</div>
+	{% include footer.html %}
+</body>
+
+</html>
