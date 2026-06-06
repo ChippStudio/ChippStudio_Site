@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-description: Privacy policy for Grabby application
+description: How Grabby handles app data, notifications, analytics, and your privacy.
 app: grabby
 include_in_header: false
 include_in_footer: false

@@ -140,6 +140,115 @@
     margin-top: 2rem;
 }
 
+.legal-page {
+    color: #334155;
+}
+
+.legal-hero {
+    max-width: 46rem;
+    padding-top: clamp(3rem, 8vw, 6rem);
+}
+
+.legal-kicker {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.legal-hero h1 {
+    margin: 0.5rem 0 0;
+    color: #1e293b;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.legal-hero p {
+    margin: 1rem 0 0;
+    color: #64748b;
+    font-size: clamp(1.125rem, 2vw, 1.35rem);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.legal-sections {
+    display: grid;
+    gap: clamp(3.25rem, 7vw, 5.5rem);
+    margin-top: clamp(3.5rem, 8vw, 6rem);
+}
+
+.legal-product {
+    max-width: 58rem;
+}
+
+.legal-product-header h2 {
+    margin: 0;
+    color: #334155;
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.legal-product-header p {
+    max-width: 34rem;
+    margin: 0.75rem 0 0;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.legal-documents {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 1.75rem;
+}
+
+.legal-document {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1.125rem;
+    align-items: start;
+    color: #334155;
+    text-decoration: none;
+}
+
+.legal-document:hover strong {
+    color: #64748b;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+.legal-document i {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 1.65rem;
+}
+
+.legal-document strong {
+    display: block;
+    color: #334155;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.legal-document span span {
+    display: block;
+    margin-top: 0.35rem;
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
 @media (max-width: 640px) {
     .dear-today-showcase {
         width: 100%;
@@ -158,5 +267,19 @@
 
     .dear-today-feature {
         min-height: auto;
+    }
+
+    .legal-documents {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+    
+    .legal-document {
+        grid-template-columns: 2.75rem minmax(0, 1fr);
+    }
+
+    .legal-document i {
+        width: 2.75rem;
+        height: 2.75rem;
     }
 }

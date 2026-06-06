@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Terms of service
-description: Terms of service for Dear Today application
+title: Terms of Service
+description: The usage terms, purchases, subscriptions, and service rules for Dear Today.
 app: dear_today
 include_in_header: false
 include_in_footer: false

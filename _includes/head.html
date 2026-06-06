@@ -1,31 +1,34 @@
 <head>
 	{% include head_top.html %}
+	{% assign meta_title = page.title | default: site.page_title %}
+	{% assign meta_description = page.description | default: site.description %}
+	{% assign meta_url = "https://chippstudio.ee" | append: page.url %}
 
-	<title class="pageTitle">{{ site.page_title }}</title>
+	<title class="pageTitle">{{ meta_title }}{% if page.title %} | {{ site.app_name }}{% endif %}</title>
 
 	<!-- Meta tags -->
-	<meta name="description" content="{{ site.description }}">
+	<meta name="description" content="{{ meta_description }}">
 	<meta name="keywords" content="{{ site.keywords }}" />
 
 	<meta property="og:site_name" content="{{ site.page_title }}">
-	<meta property="og:title" content="{{ site.page_title }}" />
-	<meta property="og:description" content="{{ site.description }}" />
+	<meta property="og:title" content="{{ meta_title }}" />
+	<meta property="og:description" content="{{ meta_description }}" />
 	<meta property="og:image" content="{{ site.cover | relative_url }}" />
-	<meta property="og:url" content="https://headroom.ee" />
+	<meta property="og:url" content="{{ meta_url }}" />
 	<meta property="og:type" content="website">
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta property="twitter:domain" content="headroom.ee">
-	<meta property="twitter:url" content="https://headroom.ee">
-	<meta name="twitter:title" content="{{ site.page_title }}">
-	<meta name="twitter:description" content="{{ site.description }}">
+	<meta property="twitter:domain" content="chippstudio.ee">
+	<meta property="twitter:url" content="{{ meta_url }}">
+	<meta name="twitter:title" content="{{ meta_title }}">
+	<meta name="twitter:description" content="{{ meta_description }}">
 	<meta name="twitter:image" content="{{ site.cover | relative_url }}">
 
 	<meta name="author" content="{{ site.your_name }}">
 	<meta name="copyright" content="{{ site.app_icon | relative_url }}">
 
 	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
-	<link rel="canonical" href="https://headroom.ee">
+	<link rel="canonical" href="{{ meta_url }}">
 
 	{% include head_analytics.html %}
 </head>

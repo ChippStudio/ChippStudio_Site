@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
-description: Privacy policy for Dear Today application
+description: How Dear Today handles app data, notifications, analytics, and your privacy.
 app: dear_today
 include_in_header: false
 include_in_footer: false

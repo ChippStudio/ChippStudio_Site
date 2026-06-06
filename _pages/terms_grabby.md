@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Terms of service
-description: Terms of service for Grabby application
+title: Terms of Service
+description: The usage terms, purchases, subscriptions, and service rules for Grabby.
 app: grabby
 include_in_header: false
 include_in_footer: false

@@ -7,92 +7,111 @@
 {% include head.html %}
 {% include navbar.html %}
 
-<body class="min-h-screen flex flex-col">
-  <div class="flex-grow">
-    <div class="md:container md:mx-auto px-4">
-      <div class="pt-6 md:pt-16">
-          <div class="text-5xl font-extrabold text-slate-800">
-              Legal Documents
-          </div>
-          <div class="text-lg font-medium text-slate-500">
-              Here, you can find the legal documents for all our projects.
-          </div>
-      </div>
+	<body class="min-h-screen flex flex-col">
+	  <div class="flex-grow">
+	    <main class="legal-page md:container md:mx-auto px-4">
+	      <header class="legal-hero">
+	          <div class="legal-kicker">Chipp Studio</div>
+	          <h1>Legal Documents</h1>
+	          <p>{{ page.description }}</p>
+	      </header>
 
-      <div class="pt-12 text-3xl font-bold text-slate-600"> 
-        Grabby: Photos from video
-      </div>
+	      <div class="legal-sections">
+	        <section class="legal-product" aria-labelledby="legal-grabby">
+	          <div class="legal-product-header">
+	            <h2 id="legal-grabby">Grabby</h2>
+	            <p>Capture high quality still photos from video.</p>
+	          </div>
 
-      <div class="flex pt-5">
-        {% for page in site.pages %}
-          {% if page.app == 'grabby' %}
-            <a href="{{ page.url | relative_url }}" target="_self" class="flex pr-14">
-              <div class="flex">
-                <img class="object-fill inline max-h-14 pr-4" src="{{site.baseurl}}/images/chipp_document.png" alt="...">
-                <div>
-                  <div class="text-2xl font-semibold text-slate-600">
-                    {{ page.title }}
-                  </div>
-                  <div class="text-xl text-slate-400">
-                    {{ page.description }}
-                  </div>
-                </div>
-              </div>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
+	          <div class="legal-documents">
+	            {% for page in site.pages %}
+	              {% if page.app == 'grabby' %}
+	                <a href="{{ page.url | relative_url }}" target="_self" class="legal-document">
+	                  <i class="far fa-file-alt"></i>
+	                  <span>
+	                    <strong>Grabby {{ page.title }}</strong>
+	                    <span>{{ page.description }}</span>
+	                  </span>
+	                </a>
+	              {% endif %}
+	            {% endfor %}
+	          </div>
+	        </section>
 
-      <div class="pt-12 text-3xl font-bold text-slate-600"> 
-        Dear Today: Mood Capture
-      </div>
+	        <section class="legal-product" aria-labelledby="legal-dear-today">
+	          <div class="legal-product-header">
+	            <h2 id="legal-dear-today">Dear Today</h2>
+	            <p>A private daily mood and photo journal.</p>
+	          </div>
 
-      <div class="flex pt-5">
-        {% for page in site.pages %}
-          {% if page.app == 'dear_today' %}
-            <a href="{{ page.url | relative_url }}" target="_self" class="flex pr-14">
-              <div class="flex">
-                <img class="object-fill inline max-h-14 pr-4" src="{{site.baseurl}}/images/chipp_document.png" alt="...">
-                <div>
-                  <div class="text-2xl font-semibold text-slate-600">
-                    {{ page.title }}
-                  </div>
-                  <div class="text-xl text-slate-400">
-                    {{ page.description }}
-                  </div>
-                </div>
-              </div>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
+	          <div class="legal-documents">
+	            {% for page in site.pages %}
+	              {% if page.app == 'dear_today' %}
+	                <a href="{{ page.url | relative_url }}" target="_self" class="legal-document">
+	                  <i class="far fa-file-alt"></i>
+	                  <span>
+	                    <strong>Dear Today {{ page.title }}</strong>
+	                    <span>{{ page.description }}</span>
+	                  </span>
+	                </a>
+	              {% endif %}
+	            {% endfor %}
+	          </div>
+	        </section>
 
-      <div class="pt-12 text-3xl font-bold text-slate-600"> 
-        Nota - AI Audio Notes
-      </div>
+		        <section class="legal-product" aria-labelledby="legal-nota">
+		          <div class="legal-product-header">
+		            <h2 id="legal-nota">Nota</h2>
+		            <p>AI audio notes for recording, transcribing, and summarizing ideas.</p>
+		          </div>
 
-      <div class="flex pt-5">
-        {% for page in site.pages %}
-          {% if page.app == 'nota' %}
-            <a href="{{ page.url | relative_url }}" target="_self" class="flex pr-14">
-              <div class="flex">
-                <img class="object-fill inline max-h-14 pr-4" src="{{site.baseurl}}/images/chipp_document.png" alt="...">
-                <div>
-                  <div class="text-2xl font-semibold text-slate-600">
-                    {{ page.title }}
-                  </div>
-                  <div class="text-xl text-slate-400">
-                    {{ page.description }}
-                  </div>
-                </div>
-              </div>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-  {% include footer.html %}
-</body>
+		          <div class="legal-documents">
+	                <a href="https://trynota.ee/privacypolicy/" target="_blank" rel="noopener" class="legal-document">
+	                  <i class="far fa-file-alt"></i>
+	                  <span>
+	                    <strong>Nota Privacy Policy</strong>
+	                    <span>Hosted on Nota's website at trynota.ee.</span>
+	                  </span>
+	                </a>
+
+	                <a href="https://trynota.ee/terms/" target="_blank" rel="noopener" class="legal-document">
+	                  <i class="far fa-file-alt"></i>
+	                  <span>
+	                    <strong>Nota Terms of Service</strong>
+	                    <span>Hosted on Nota's website at trynota.ee.</span>
+	                  </span>
+	                </a>
+		          </div>
+		        </section>
+
+		        <section class="legal-product" aria-labelledby="legal-headroom">
+		          <div class="legal-product-header">
+		            <h2 id="legal-headroom">Headroom</h2>
+		            <p>Podcast publishing tools for transcription, metadata, and show notes.</p>
+		          </div>
+
+		          <div class="legal-documents">
+	                <a href="https://www.headroom.ee/privacypolicy/" target="_blank" rel="noopener" class="legal-document">
+	                  <i class="far fa-file-alt"></i>
+	                  <span>
+	                    <strong>Headroom Privacy Policy</strong>
+	                    <span>Hosted on Headroom's website at headroom.ee.</span>
+	                  </span>
+	                </a>
+
+	                <a href="https://www.headroom.ee/terms/" target="_blank" rel="noopener" class="legal-document">
+	                  <i class="far fa-file-alt"></i>
+	                  <span>
+	                    <strong>Headroom Terms of Service</strong>
+	                    <span>Hosted on Headroom's website at headroom.ee.</span>
+	                  </span>
+	                </a>
+		          </div>
+		        </section>
+	      </div>
+	    </main>
+	  </div>
+	  {% include footer.html %}
+	</body>
 
 </html>
