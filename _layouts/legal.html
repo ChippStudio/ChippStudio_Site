@@ -2,12 +2,12 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 <!doctype html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {% include head.html %}
-{% include navbar.html %}
 
 	<body class="min-h-screen flex flex-col">
+	  {% include navbar.html %}
 	  <div class="flex-grow">
 	    <main class="legal-page md:container md:mx-auto px-4">
 	      <header class="legal-hero">

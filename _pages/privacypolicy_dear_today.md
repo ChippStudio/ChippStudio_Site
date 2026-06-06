@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Privacy Policy
+meta_title: Dear Today Privacy Policy
+heading: Dear Today Privacy Policy
 description: How Dear Today handles app data, notifications, analytics, and your privacy.
 app: dear_today
 include_in_header: false
@@ -25,10 +27,10 @@ We use the information we collect to operate and improve our applition, and cust
 ## Transfers of Information
 Information may be processed, stored, and used outside of the country in which you are located. Data privacy laws vary across jurisdictions, and different laws may be applicable to your data depending on where it is processed, stored, or used.
 
-# Your Consent
+## Your Consent
 By using our site or apps, you consent to our privacy policy.
 
-# Third Party Services
+## Third Party Services
 
 ### Amplitude
 Analytics service. Read [privacy policy](https://amplitude.com/privacy)
@@ -36,10 +38,10 @@ Analytics service. Read [privacy policy](https://amplitude.com/privacy)
 ### RevenueCat
 Purchase provider and analytics service. Read [privacy policy](https://www.revenuecat.com/privacy/)
 
-# Contacting Us
+## Contacting Us
 If you have questions regarding this privacy policy, you may email [info@chippstudio.ee](mailto:info@chippstudio.ee).
 
-# Changes to this policy
+## Changes to this policy
 If we decide to change our privacy policy, we will post those changes on this page. Summary of changes so far:
 
 - **January 5**, 2026: First published.

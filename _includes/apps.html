@@ -5,9 +5,9 @@
 
     <div class="pt-5 max-w-full md:max-w-2xl md:mx-0 flex flex-col gap-8">
         <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="https://headroom.ee">
-            <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+            <h2 class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
                 Headroom: AI-Powered Podcast Publishing for macOS
-            </div>
+            </h2>
             <div class="mt-2 flex gap-2">
                 <span
                     class="inline-block rounded-full bg-slate-100 px-3 py-1 text-sm font-heavy text-slate-500 mb-2">
@@ -24,9 +24,9 @@
         </a>
 
         <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="https://trynota.ee">
-            <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+            <h2 class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
                 Nota - AI Audio Notes
-            </div>
+            </h2>
             <div class="mt-2 flex gap-2">
                 <span
                     class="inline-block rounded-full bg-slate-100 px-3 py-1 text-sm font-heavy text-slate-500 mb-2">
@@ -46,9 +46,9 @@
         {% if page.app_layout == true %}
         <a target="_self" class="text-slate-700 hover:text-slate-400 font-bold pr-4"
             href="{{ page.url | relative_url }}">
-            <div class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
+            <h2 class="text-slate-700 hover:text-slate-500 hover:underline text-3xl font-bold">
                 {{ page.title }}
-            </div>
+            </h2>
             {% if page.systems %}
             <div class="mt-2 flex gap-2">
                 {% for system in page.systems %}

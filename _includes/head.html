@@ -1,34 +1,118 @@
 <head>
 	{% include head_top.html %}
-	{% assign meta_title = page.title | default: site.page_title %}
+	{% assign meta_title = page.meta_title | default: page.title | default: site.page_title %}
 	{% assign meta_description = page.description | default: site.description %}
-	{% assign meta_url = "https://chippstudio.ee" | append: page.url %}
+	{% assign meta_keywords = page.keywords | default: site.keywords %}
+	{% assign meta_url = page.url | absolute_url %}
+	{% assign meta_image_source = page.image | default: page.cover | default: site.cover %}
+	{% if meta_image_source contains "://" %}
+		{% assign meta_image_url = meta_image_source %}
+	{% elsif page.layout == "post" and page.cover %}
+		{% assign meta_image_path = "/images/blog/covers/" | append: page.cover | append: "_header_cover.png" %}
+		{% assign meta_image_url = meta_image_path | absolute_url %}
+	{% elsif page.cover and meta_image_source contains "/" %}
+		{% assign meta_image_url = meta_image_source | absolute_url %}
+	{% elsif page.cover %}
+		{% assign meta_image_path = "/images/" | append: meta_image_source | append: "_header_cover.png" %}
+		{% assign meta_image_url = meta_image_path | absolute_url %}
+	{% else %}
+		{% assign meta_image_url = meta_image_source | absolute_url %}
+	{% endif %}
 
-	<title class="pageTitle">{{ meta_title }}{% if page.title %} | {{ site.app_name }}{% endif %}</title>
+	<title class="pageTitle">{% if page.url == "/" %}{{ meta_title }}{% else %}{{ meta_title }} | {{ site.app_name }}{% endif %}</title>
 
-	<!-- Meta tags -->
 	<meta name="description" content="{{ meta_description }}">
-	<meta name="keywords" content="{{ site.keywords }}" />
+	<meta name="keywords" content="{{ meta_keywords }}">
+	{% if page.noindex %}
+	<meta name="robots" content="noindex,follow">
+	{% else %}
+	<meta name="robots" content="index,follow">
+	{% endif %}
 
-	<meta property="og:site_name" content="{{ site.page_title }}">
-	<meta property="og:title" content="{{ meta_title }}" />
-	<meta property="og:description" content="{{ meta_description }}" />
-	<meta property="og:image" content="{{ site.cover | relative_url }}" />
-	<meta property="og:url" content="{{ meta_url }}" />
-	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="{{ site.app_name }}">
+	<meta property="og:title" content="{{ meta_title }}">
+	<meta property="og:description" content="{{ meta_description }}">
+	<meta property="og:image" content="{{ meta_image_url }}">
+	<meta property="og:url" content="{{ meta_url }}">
+	<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="chippstudio.ee">
 	<meta property="twitter:url" content="{{ meta_url }}">
 	<meta name="twitter:title" content="{{ meta_title }}">
 	<meta name="twitter:description" content="{{ meta_description }}">
-	<meta name="twitter:image" content="{{ site.cover | relative_url }}">
+	<meta name="twitter:image" content="{{ meta_image_url }}">
 
 	<meta name="author" content="{{ site.your_name }}">
-	<meta name="copyright" content="{{ site.app_icon | relative_url }}">
+	<meta name="copyright" content="{{ site.app_name }}">
 
 	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
 	<link rel="canonical" href="{{ meta_url }}">
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Organization",
+				"@id": "{{ site.url }}/#organization",
+				"name": {{ site.app_name | jsonify }},
+				"url": {{ site.url | jsonify }},
+				"logo": {{ site.app_icon | absolute_url | jsonify }},
+				"email": {{ site.email_address | jsonify }},
+				"founder": {
+					"@type": "Person",
+					"name": {{ site.your_name | jsonify }}
+				},
+				"sameAs": [
+					{% for social in site.konstantin_socials %}
+					{{ social.url | jsonify }}{% unless forloop.last %},{% endunless %}
+					{% endfor %}
+				]
+			},
+			{
+				"@type": "WebSite",
+				"@id": "{{ site.url }}/#website",
+				"url": {{ site.url | jsonify }},
+				"name": {{ site.app_name | jsonify }},
+				"description": {{ site.description | jsonify }},
+				"publisher": {
+					"@id": "{{ site.url }}/#organization"
+				}
+			},
+			{
+				"@type": "WebPage",
+				"@id": "{{ meta_url }}#webpage",
+				"url": {{ meta_url | jsonify }},
+				"name": {{ meta_title | jsonify }},
+				"description": {{ meta_description | jsonify }},
+				"isPartOf": {
+					"@id": "{{ site.url }}/#website"
+				},
+				"publisher": {
+					"@id": "{{ site.url }}/#organization"
+				},
+				"image": {{ meta_image_url | jsonify }}
+			}{% if page.app_layout == true %},
+			{
+				"@type": "SoftwareApplication",
+				"@id": "{{ meta_url }}#software",
+				"name": {{ page.app_name | default: page.title | jsonify }},
+				"applicationCategory": {{ page.application_category | default: "LifestyleApplication" | jsonify }},
+				"operatingSystem": {{ page.operating_system | default: "iOS, iPadOS" | jsonify }},
+				"description": {{ meta_description | jsonify }},
+				"url": {{ meta_url | jsonify }},
+				"image": {{ meta_image_url | jsonify }}{% if page.app_store_url %},
+				"downloadUrl": {{ page.app_store_url | jsonify }}{% endif %},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD"
+				}
+			}{% endif %}
+		]
+	}
+	</script>
 
 	{% include head_analytics.html %}
 </head>

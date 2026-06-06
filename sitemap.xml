@@ -1,0 +1,23 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ "/" | absolute_url }}</loc>
+    <priority>1.0</priority>
+  </url>
+  {% assign sitemap_pages = site.pages | sort: "url" %}
+  {% for item in sitemap_pages %}
+  {% if item.url and item.url != "/" and item.url != "/robots.txt" and item.url != "/sitemap.xml" and item.noindex != true %}
+  <url>
+    <loc>{{ item.url | absolute_url }}</loc>
+    {% if item.app_layout == true %}
+    <priority>0.9</priority>
+    {% else %}
+    <priority>0.6</priority>
+    {% endif %}
+  </url>
+  {% endif %}
+  {% endfor %}
+</urlset>

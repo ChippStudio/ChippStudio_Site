@@ -2,21 +2,21 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 <!doctype html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {% include head.html %}
-{% include navbar.html %}
 
 <body class="min-h-screen flex flex-col">
-  <div class="flex-grow pb-24">
+  {% include navbar.html %}
+  <main class="flex-grow pb-24">
     <div class="container mx-auto">
 
       <div class="grid justify-items-center px-2">
 
         <div class="my-16 text-center">
-          <div class="text-4xl font-bold">
+          <h1 class="text-4xl font-bold">
             Chipp Studio | Blog
-          </div>
+          </h1>
           <div class="text-lg">
             News, updates, tips, and Chipp Studio under the hood
           </div>
@@ -31,7 +31,7 @@
           <a target="_self" href="{{ post.url }}">
             <div class="md:flex max-w-4xl">
               <div>
-                <img class="object-fill inline rounded-md md:max-w-96" src="{{site.baseurl}}/images/blog/covers/{{ post.cover }}.png" alt="...">
+                <img class="object-fill inline rounded-md md:max-w-96" src="{{site.baseurl}}/images/blog/covers/{{ post.cover }}.png" alt="{{ post.title }} cover image">
               </div>
 
               <div class="mx-3 my-3">
@@ -55,7 +55,7 @@
                   <div class="text-text-subelement text-sm">{{ post.date | date: "%B %d, %Y" }}</div>
                 </div>
                 <div class="max-md:hidden">
-                  <img class="inline rounded-md max-w-44" src="{{site.baseurl}}/images/blog/covers/{{ post.cover }}.png" alt="...">
+                  <img class="inline rounded-md max-w-44" src="{{site.baseurl}}/images/blog/covers/{{ post.cover }}.png" alt="{{ post.title }} cover image">
                 </div>
               </div>
             </a>
@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
   {% include footer.html %}
 </body>
 

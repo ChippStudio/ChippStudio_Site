@@ -1,5 +1,9 @@
-#page title
-page_title: 'Chipp Studio | Indie Development'
+# Site identity
+url: https://chippstudio.ee
+baseurl: ""
+lang: en
+timezone: Europe/Tallinn
+page_title: 'Chipp Studio | Indie iOS and Mac Apps'
 
 # App Info
 # ios_app_id: 6453882470
@@ -13,9 +17,9 @@ app_name: 'Chipp Studio'
 app_price: Free
 
 # Meta tags optimisation
-description: 'Chipp Studio is a boutique indie development studio specializing in crafting high-quality Mac and iOS applications. With a focus on user experience, performance, and elegant design, Chipp Studio develops custom solutions for both professionals and creative users.'
+description: 'Chipp Studio builds thoughtful iOS and macOS apps for recording, journaling, media capture, podcast publishing, and creative workflows.'
 cover: images/meta_cover.png
-keywords: Chipp Studio, indie development studio, Mac apps, iOS apps, Apple ecosystem, app development, custom app solutions, user experience, app design, professional tools, creative tools, indie apps, iOS development, macOS development, app performance, app innovation, software for professionals, app portfolio
+keywords: Chipp Studio, iOS apps, macOS apps, indie app studio, Apple apps, Tallinn app studio
 
 enable_smart_app_banner: false
 
@@ -60,7 +64,6 @@ sass:
 exclude:
   - LICENSE
   - README.md
-  - CNAME
   - vendor/
 
 include:

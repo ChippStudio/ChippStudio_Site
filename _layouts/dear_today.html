@@ -2,52 +2,21 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 <!doctype html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
-<head>
-	{% include head_top.html %}
-
-	<title class="pageTitle">{{ page.title }} | Chipp Studio</title>
-
-	<!-- Meta tags -->
-	<meta name="description" content="{{ page.description }}">
-	<meta name="keywords" content="{{ page.keywords }}" />
-
-	<meta property="og:site_name" content="{{ page.title }}">
-	<meta property="og:title" content="{{ page.title }}" />
-	<meta property="og:description" content="{{ page.description }}" />
-	<meta property="og:image" content="/images/{{ page.cover }}_header_cover.png" />
-	<meta property="og:url" content="https://chippstudio.ee{{ page.url }}" />
-	<meta property="og:type" content="website">
-
-	<meta name="twitter:card" content="summary_large_image">
-	<meta property="twitter:domain" content="chippstudio.ee">
-	<meta property="twitter:url" content="https://chippstudio.ee{{ page.url }}">
-	<meta name="twitter:title" content="{{ page.title }}">
-	<meta name="twitter:description" content="{{ page.description }}">
-	<meta name="twitter:image" content="/images/{{ page.cover}}_header_cover.png">
-
-	<meta name="author" content="{{ site.your_name }}">
-	<meta name="copyright" content="{{ site.app_icon | relative_url }}">
-
-	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
-	<link rel="canonical" href="https://chippstudio.ee{{ page.url }}">
-
-	{% include head_analytics.html %}
-</head>
-
-{% include navbar.html %}
+{% include head.html %}
 
 	<body class="min-h-screen flex flex-col">
-		<div class="flex-grow pb-24">
+		{% include navbar.html %}
+		<main class="flex-grow pb-24">
 			<div class="container mx-auto dear-today-page">
 
 				<div class="grid justify-items-center px-2">
 
 					<div class="my-16 text-center items-center pt-12">
-						<div class="text-5xl md:text-8xl font-extrabold text-slate-700">
+						<h1 class="text-5xl md:text-8xl font-extrabold text-slate-700">
 							Dear<br>Today
-						</div>
+						</h1>
 
 						<div class="text-4xl md:text-4xl font-bold text-slate-900 pt-16">
 							One photo. One feeling.
@@ -59,11 +28,11 @@
 					</div>
 
 					<a target="_self" href="https://itunes.apple.com/app/id6756238222">
-						<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
+						<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="Download Dear Today on the App Store">
 					</a>
 
 					<div class="dear-today-showcase pt-8 md:pt-24">
-						<img src="{{site.baseurl}}/images/DearToday_screenshot.png" alt="Dear Today app screenshots">
+						<img src="{{site.baseurl}}/images/DearToday_screenshot.png" alt="Dear Today iPhone screenshots showing a daily photo journal and mood tracker">
 					</div>
 
 					<section class="dear-today-section" aria-labelledby="dear-today-features">
@@ -146,13 +115,13 @@
 						<p>Start with one moment today. Over time, your photos and moods become a clearer picture of your life.</p>
 
 						<a class="dear-today-cta-link" target="_self" href="https://itunes.apple.com/app/id6756238222">
-							<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
+							<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="Download Dear Today on the App Store">
 						</a>
 					</section>
 
 				</div>
 			</div>
-	</div>
+	</main>
 	{% include footer.html %}
 </body>
 

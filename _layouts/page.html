@@ -3,17 +3,20 @@
 ---
 
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {% include head.html %}
-{% include navbar.html %}
 
 <body class="min-h-screen flex flex-col">
-    <div class="container items-center mx-auto md:max-w-4xl xs:max-w-2xl py-10 px-6 flex-grow">
+    {% include navbar.html %}
+    <main class="container items-center mx-auto md:max-w-4xl xs:max-w-2xl py-10 px-6 flex-grow">
         <article class="page markdown-body">
+            {% if page.heading %}
+            <h1>{{ page.heading }}</h1>
+            {% endif %}
             {{ content }}
         </article>
-    </div>
+    </main>
 
     {% include footer.html %}
 </body>

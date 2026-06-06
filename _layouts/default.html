@@ -1,17 +1,14 @@
 <!doctype html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {% include head.html %}
-{% include navbar.html %}
 
 <body class="min-h-screen flex flex-col">
+  {% include navbar.html %}
 
-  <!-- Google Tag Manager (noscript) -->
-  <!-- End Google Tag Manager (noscript) -->
-
-  <div class="flex-grow">
+  <main class="flex-grow">
     {% include header.html %}
-  </div>
+  </main>
   {% include footer.html %}
 </body>
 
