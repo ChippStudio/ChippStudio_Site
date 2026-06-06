@@ -38,45 +38,120 @@
 
 {% include navbar.html %}
 
-<body class="min-h-screen flex flex-col">
-	<div class="flex-grow pb-24">
-		<div class="container mx-auto">
+	<body class="min-h-screen flex flex-col">
+		<div class="flex-grow pb-24">
+			<div class="container mx-auto dear-today-page">
 
-			<div class="grid justify-items-center px-2">
+				<div class="grid justify-items-center px-2">
 
-				<div class="my-16 text-center items-center pt-12">
-					<div class="text-5xl md:text-8xl font-extrabold text-slate-700">
-						Dear<br>Today
+					<div class="my-16 text-center items-center pt-12">
+						<div class="text-5xl md:text-8xl font-extrabold text-slate-700">
+							Dear<br>Today
+						</div>
+
+						<div class="text-4xl md:text-4xl font-bold text-slate-900 pt-16">
+							One photo. One feeling.
+						</div>
+
+						<div class="dear-today-hero-copy text-xl md:text-2xl pt-4 text-center">
+							Capture one meaningful moment each day, choose how it felt, and watch your memories turn into a private visual diary.
+						</div>
 					</div>
 
-					<div class="text-4xl md:text-4xl font-bold text-slate-900 pt-16">
-						Every day tells a story
+					<a target="_self" href="https://itunes.apple.com/app/id6756238222">
+						<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
+					</a>
+
+					<div class="dear-today-showcase pt-8 md:pt-24">
+						<img src="{{site.baseurl}}/images/DearToday_screenshot.png" alt="Dear Today app screenshots">
 					</div>
 
-					<div class="text-xl md:text-2xl max-w-90 pt-4 text-center">
-						Capture your daily moments, track your moods, and watch your life unfold in the most beautiful visual diary you’ve ever kept.
-					</div>
+					<section class="dear-today-section" aria-labelledby="dear-today-features">
+						<div class="dear-today-kicker">Private visual diary</div>
+						<h2 id="dear-today-features">See how your days felt</h2>
+						<p class="dear-today-section-copy">
+							Dear Today is built for busy weeks that deserve a little more awareness. No feeds, no likes,
+							no pressure to write pages - just a simple daily ritual you can keep.
+						</p>
+
+						<div class="dear-today-features">
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-camera"></i>
+								</div>
+								<h3>One photo a day</h3>
+								<p>Choose a single moment that captures the day, without turning journaling into another task.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-smile"></i>
+								</div>
+								<h3>Mood tracking</h3>
+								<p>Mark how you felt each day so emotional patterns become easier to notice over time.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-pen"></i>
+								</div>
+								<h3>Short captions</h3>
+								<p>Add a quick note when context matters, or keep the entry beautifully minimal.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-stream"></i>
+								</div>
+								<h3>Visual timeline</h3>
+								<p>Browse your memories in a clean timeline that keeps the focus on moments, not clutter.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-chart-line"></i>
+								</div>
+								<h3>Weekly insights</h3>
+								<p>Understand the emotional shape of your week with mood insights you can actually see.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-images"></i>
+								</div>
+								<h3>Monthly collages</h3>
+								<p>Turn daily entries into photo recaps that make ordinary weeks worth revisiting.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-question-circle"></i>
+								</div>
+								<h3>Gentle prompts</h3>
+								<p>Pause with reflection prompts designed for noticing, not overthinking.</p>
+							</article>
+
+							<article class="dear-today-feature">
+								<div class="dear-today-feature-icon">
+									<i class="fas fa-lock"></i>
+								</div>
+								<h3>Private by design</h3>
+								<p>Keep a space that is just yours, with no social performance and no public audience.</p>
+							</article>
+						</div>
+					</section>
+
+					<section class="dear-today-cta">
+						<h2>Memories worth revisiting</h2>
+						<p>Start with one moment today. Over time, your photos and moods become a clearer picture of your life.</p>
+
+						<a class="dear-today-cta-link" target="_self" href="https://itunes.apple.com/app/id6756238222">
+							<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
+						</a>
+					</section>
+
 				</div>
-
-				<a target="_self" href="https://itunes.apple.com/app/id6756238222">
-					<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
-				</a>
-
-				<div class="pt-8 md:pt-24">
-					<img class=" w-full h-auto"
-						src="{{site.baseurl}}/images/DearToday_screenshot.png" alt="Screenshot">
-				</div>
-
-				<div class="text-5xl font-extrabold text-slate-700 pt-4 md:pt-32">
-					Dear Today
-				</div>
-
-				<a class="pt-12" target="_self" href="https://itunes.apple.com/app/id6756238222">
-					<img class="max-w-72 h-auto hover:shadow-md rounded-2xl active:shadow-2xl" src="{{site.baseurl}}/images/app_icon_dark.png" alt="App Store button">
-				</a>
-
 			</div>
-		</div>
 	</div>
 	{% include footer.html %}
 </body>
