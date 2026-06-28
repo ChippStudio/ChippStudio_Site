@@ -1,72 +1,98 @@
-<div class="md:container md:mx-auto px-4">
-    <div class="pt-6 md:pt-16">
-        <div class="flex flex-col md:flex-row md:items-center md:gap-6">
-            <div>
-                <h1 class="text-5xl font-extrabold text-slate-800">
-                    Chipp Studio
-                </h1>
-                <div class="text-lg font-medium text-slate-500">
-                    by Konstantin Tšistjakov & Olga Vyrostko
-                </div>
-            </div>
-            <img class="w-28 h-16 md:w-auto md:h-16 mt-4 md:mt-0 object-contain" src="{{site.baseurl}}/images/team.png"
-                alt="Konstantin Tšistjakov and Olga Vyrostko from Chipp Studio">
-        </div>
-    </div>
+<section class="home-page">
+    <div class="home-shell">
+        <div class="home-hero">
+            <div class="home-hero-copy">
+                <p class="home-kicker">Independent iOS and Mac apps from Tallinn</p>
+                <h1>Chipp Studio</h1>
+                <p class="home-subtitle">
+                    We build thoughtful Apple-platform tools for recording, journaling, media capture, podcast publishing,
+                    and the small creative workflows that deserve polished software.
+                </p>
 
-    <div class="pt-5 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
-        <div class="md:pt-8">
-            <div class="pt-7 lg:pt-16">
-                <div class="sm:text-xl md:text-3xl font-bold tracking-wide text-slate-700 max-w-4xl">
-                    <span class="text-slate-400">Hi, I'm Konstantin.</span> For over a decade, I’ve been creating
-                    high-quality apps and helping others do the same. I focus on
-                    crafting great interactions, animations, and performance.
-                    Previously, I was a Senior iOS Developer at <a
-                        class="hover:text-slate-500 hover:underline hover:underline-offset-4"
-                        href="https://bolt.eu">Bolt</a> and a
-                    Senior Product Engineer at <a class="hover:text-slate-500 hover:underline hover:underline-offset-4"
-                        href="https://www.craft.do">Craft Doc</a>. Now, I’m an indie
-                    iOS and macOS developer and part-time product designer.
+                <div class="home-hero-actions">
+                    <a class="home-primary-link" href="#apps" target="_self">
+                        Explore apps
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a class="home-secondary-link" href="https://chippstudio.substack.com" target="_blank" rel="noopener">
+                        Newsletter
+                        <i class="fas fa-link"></i>
+                    </a>
                 </div>
             </div>
-            <div class="pt-4 md:pt-12">
-                {% for social in site.konstantin_socials %}
-                <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ social.url }}">
-                    {{ social.title }} <i class="text-slate-400 fas fa-link pl-1"></i>
-                </a>
-                {% endfor %}
+
+            <div class="home-hero-media" aria-label="Konstantin Tšistjakov and Olga Vyrostko from Chipp Studio">
+                <div class="home-studio-badge">
+                    <img src="{{ site.app_icon | relative_url }}" alt="" aria-hidden="true">
+                    <span>Chipp Studio</span>
+                </div>
+                <img class="home-team-photo" src="{{site.baseurl}}/images/team.png"
+                    alt="Konstantin Tšistjakov and Olga Vyrostko from Chipp Studio">
+                <div class="home-capability-list" aria-label="Studio focus areas">
+                    <span>Product design</span>
+                    <span>Native apps</span>
+                    <span>Interaction craft</span>
+                </div>
             </div>
         </div>
 
-        <div class="md:pt-0">
-            <div class="pt-7 md:pt-16">
-                <div class="sm:text-xl md:text-3xl font-bold tracking-wide text-slate-700 max-w-4xl">
-                    <span class="text-slate-400">Hi, I’m Olga.</span> I’m passionate about uncovering real user problems and turning them into simple
-                    solutions that combine delight and pragmatism - and just work. By day, I’m an Engineering Manager at
-                    <a
-                        class="hover:text-slate-500 hover:underline hover:underline-offset-4"
-                        href="https://bolt.eu">Bolt</a>, where I lead the cross-platform Rider team and help scale mobile experiences for millions of
-                    users. Outside of work (by night?), I spend my time exploring side projects that blend product
-                    thinking, design, and mobile engineering into solving the problems.
-                </div>
+        <section class="home-founders" aria-labelledby="founders-title">
+            <div class="home-section-heading">
+                <p class="home-kicker">About us</p>
+                <h2 id="founders-title">A tiny studio with product, design, and engineering in the same room.</h2>
             </div>
-            <div class="pt-4 md:pt-12">
-                {% for social in site.olga_socials %}
-                <a class="text-slate-700 hover:text-slate-400 font-bold pr-4" href="{{ social.url }}">
-                    {{ social.title }} <i class="text-slate-400 fas fa-link pl-1"></i>
-                </a>
-                {% endfor %}
+
+            <div class="home-founder-grid">
+                <article class="home-founder">
+                    <div class="home-founder-meta">
+                        <span class="home-founder-initial">K</span>
+                        <div>
+                            <h3>Konstantin Tšistjakov</h3>
+                            <p>Indie iOS and macOS developer, part-time product designer.</p>
+                        </div>
+                    </div>
+                    <p>
+                        For over a decade, I’ve been creating high-quality apps and helping others do the same. I focus on
+                        crafting great interactions, animations, and performance. Previously, I was a Senior iOS Developer
+                        at <a href="https://bolt.eu">Bolt</a> and a Senior Product Engineer at
+                        <a href="https://www.craft.do">Craft Doc</a>.
+                    </p>
+                    <div class="home-socials" aria-label="Konstantin links">
+                        {% for social in site.konstantin_socials %}
+                        <a href="{{ social.url }}">
+                            {{ social.title }}
+                            <i class="fas fa-link"></i>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </article>
+
+                <article class="home-founder">
+                    <div class="home-founder-meta">
+                        <span class="home-founder-initial">O</span>
+                        <div>
+                            <h3>Olga Vyrostko</h3>
+                            <p>Engineering manager and product-minded mobile builder.</p>
+                        </div>
+                    </div>
+                    <p>
+                        I’m passionate about uncovering real user problems and turning them into simple solutions that
+                        combine delight and pragmatism. By day, I’m an Engineering Manager at
+                        <a href="https://bolt.eu">Bolt</a>, where I lead the cross-platform Rider team and help scale
+                        mobile experiences for millions of users.
+                    </p>
+                    <div class="home-socials" aria-label="Olga links">
+                        {% for social in site.olga_socials %}
+                        <a href="{{ social.url }}">
+                            {{ social.title }}
+                            <i class="fas fa-link"></i>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="pt-12">
-        <a href="https://chippstudio.substack.com" target="_blank" rel="noopener"
-            class="text-slate-700 hover:text-slate-400 font-bold pr-4 flex items-center w-fit">
-            Chipp Studio Newsletter
-            <i class="text-slate-400 fas fa-link pl-1"></i>
-        </a>
+        {% include apps.html %}
     </div>
-
-    {% include apps.html %}
-</div>
+</section>
