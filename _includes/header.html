@@ -5,7 +5,7 @@
                 <p class="home-kicker">Independent iOS and Mac apps from Tallinn</p>
                 <h1>Chipp Studio</h1>
                 <p class="home-subtitle">
-                    We build thoughtful Apple-platform tools for recording, journaling, media capture, podcast publishing,
+                    I build thoughtful Apple-platform tools for recording, journaling, media capture, podcast publishing,
                     and the small creative workflows that deserve polished software.
                 </p>
 
@@ -21,13 +21,13 @@
                 </div>
             </div>
 
-            <div class="home-hero-media" aria-label="Konstantin Tšistjakov and Olga Vyrostko from Chipp Studio">
+            <div class="home-hero-media">
                 <div class="home-studio-badge">
                     <img src="{{ site.app_icon | relative_url }}" alt="" aria-hidden="true">
                     <span>Chipp Studio</span>
                 </div>
-                <img class="home-team-photo" src="{{site.baseurl}}/images/team.png"
-                    alt="Konstantin Tšistjakov and Olga Vyrostko from Chipp Studio">
+                <img class="home-founder-photo" src="{{ '/images/me_avatar.png' | relative_url }}"
+                    width="312" height="312" alt="Konstantin Tšistjakov">
                 <div class="home-capability-list" aria-label="Studio focus areas">
                     <span>Product design</span>
                     <span>Native apps</span>
@@ -36,61 +36,35 @@
             </div>
         </div>
 
-        <section class="home-founders" aria-labelledby="founders-title">
+        <section class="home-founders" aria-labelledby="about-title">
             <div class="home-section-heading">
-                <p class="home-kicker">About us</p>
-                <h2 id="founders-title">A tiny studio with product, design, and engineering in the same room.</h2>
+                <p class="home-kicker">About the studio</p>
+                <h2 id="about-title">An independent app studio run by Konstantin.</h2>
             </div>
 
-            <div class="home-founder-grid">
-                <article class="home-founder">
-                    <div class="home-founder-meta">
-                        <span class="home-founder-initial">K</span>
-                        <div>
-                            <h3>Konstantin Tšistjakov</h3>
-                            <p>Indie iOS and macOS developer, part-time product designer.</p>
-                        </div>
+            <article class="home-founder">
+                <div class="home-founder-meta">
+                    <span class="home-founder-initial">K</span>
+                    <div>
+                        <h3>Konstantin Tšistjakov</h3>
+                        <p>Indie iOS and macOS developer, part-time product designer.</p>
                     </div>
-                    <p>
-                        For over a decade, I’ve been creating high-quality apps and helping others do the same. I focus on
-                        crafting great interactions, animations, and performance. Previously, I was a Senior iOS Developer
-                        at <a href="https://bolt.eu">Bolt</a> and a Senior Product Engineer at
-                        <a href="https://www.craft.do">Craft Doc</a>.
-                    </p>
-                    <div class="home-socials" aria-label="Konstantin links">
-                        {% for social in site.konstantin_socials %}
-                        <a href="{{ social.url }}">
-                            {{ social.title }}
-                            <i class="fas fa-link"></i>
-                        </a>
-                        {% endfor %}
-                    </div>
-                </article>
-
-                <article class="home-founder">
-                    <div class="home-founder-meta">
-                        <span class="home-founder-initial">O</span>
-                        <div>
-                            <h3>Olga Vyrostko</h3>
-                            <p>Engineering manager and product-minded mobile builder.</p>
-                        </div>
-                    </div>
-                    <p>
-                        I’m passionate about uncovering real user problems and turning them into simple solutions that
-                        combine delight and pragmatism. By day, I’m an Engineering Manager at
-                        <a href="https://bolt.eu">Bolt</a>, where I lead the cross-platform Rider team and help scale
-                        mobile experiences for millions of users.
-                    </p>
-                    <div class="home-socials" aria-label="Olga links">
-                        {% for social in site.olga_socials %}
-                        <a href="{{ social.url }}">
-                            {{ social.title }}
-                            <i class="fas fa-link"></i>
-                        </a>
-                        {% endfor %}
-                    </div>
-                </article>
-            </div>
+                </div>
+                <p>
+                    For over a decade, I’ve been creating high-quality apps and helping others do the same. I focus on
+                    crafting great interactions, animations, and performance. Previously, I was a Senior iOS Developer
+                    at <a href="https://bolt.eu">Bolt</a> and a Senior Product Engineer at
+                    <a href="https://www.craft.do">Craft Doc</a>.
+                </p>
+                <div class="home-socials" aria-label="Konstantin links">
+                    {% for social in site.konstantin_socials %}
+                    <a href="{{ social.url }}">
+                        {{ social.title }}
+                        <i class="fas fa-link"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+            </article>
         </section>
 
         {% include apps.html %}
